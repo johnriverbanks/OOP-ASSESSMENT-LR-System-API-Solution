@@ -3,6 +3,7 @@ import { LeaveStatus } from "../LeaveSystem/leaveStatusEnum";
 import { LeaveType } from "../LeaveSystem/leaveTypeEnums";
 
 @Entity("leave_request")
+
 export class LeaveRequestEntity {
     @PrimaryGeneratedColumn()
     leaveRequestId: number;

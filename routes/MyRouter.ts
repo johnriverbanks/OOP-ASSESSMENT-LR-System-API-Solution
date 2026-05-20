@@ -1,6 +1,4 @@
 import { Router } from "express";
-import { Request, Response } from 'express';
-import { StatusCodes } from "http-status-codes";
 import { LeaveController } from "../LeaveSystem/leaveController";
 import { LeaveRequestRepo } from "../LeaveSystem/leaveRequestRepo";
 import { LeaveRequestService } from "../LeaveSystem/leaveRequestService";
