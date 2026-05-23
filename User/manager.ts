@@ -1,15 +1,15 @@
 import { FullName } from "./fullName";
-import { Country } from "../Utility/countryBankHolidays.ts/countryEnum";
 import { UserRole } from "./userRoleEnum";
 import { LeaveBalance } from "../LeaveSystem/leaveBalance";
 import { Employee } from "./employee";
+import { validateCountry } from "../Validation/validateCountry";
 
 export class Manager extends Employee {
 
     constructor (
         employeeId: number,
         fullName: FullName,
-        country: Country,
+        country: string,
         role: UserRole,
         email: string,
         password: string,

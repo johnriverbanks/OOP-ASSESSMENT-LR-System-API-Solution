@@ -1,6 +1,5 @@
 import { LeaveBalance } from "../LeaveSystem/leaveBalance";
-import { Country } from "../Utility/countryBankHolidays.ts/countryEnum";
-import { Employee } from "./employee";
+import { validateCountry } from "../Validation/validateCountry";
 import { FullName } from "./fullName";
 import { Manager } from "./manager";
 import { UserRole } from "./userRoleEnum";
@@ -10,7 +9,7 @@ export class Admin extends Manager {
     constructor (
         employeeId: number,
         fullName: FullName,
-        country: Country,
+        country: string,
         email: string,
         password: string,
         salt: string,
