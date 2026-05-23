@@ -6,8 +6,8 @@ export class bankHolidayProviderRegistry {
 
     getOrigin(country: string): BankHolidayOrigin {
 
-        const origin = this.providers.find(p =>
-            p.canHandle(country)
+        const origin = this.providers.find(provider =>
+            provider.canHandle(country)
         );
 
         if (!origin) {

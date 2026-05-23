@@ -1,23 +1,19 @@
-import { bankHolidayProviderRegistry } from "../bankHolidays/bankHolidayProviderRegistry";
 import { weekends } from "./weekends";
 import { formatDate } from "./FormatDate";
 
 export class DateCalculator {
 
-    constructor(private registry: bankHolidayProviderRegistry) {}
-
-    async calculateLeaveDays(startDate: Date, endDate: Date, country: string): Promise<number> {
+    async calculateLeaveDays(startDate: Date, endDate: Date, bankHolidays: Set<string>): Promise<number> {
 
         let workingDays = 0;
 
         const leaveStart = new Date(startDate);
-        const provider = this.registry.getOrigin(country);
-        const bankHolidaySet = await provider.getBankHolidays(country);
+        const leaveEnd = new Date(endDate)
 
-        while (leaveStart <= endDate) {
-            const isAWeekend = weekends.isAWeekend(leaveStart);
+        while (leaveStart <= leaveEnd) {
             const formattedDate = formatDate(leaveStart);
-            const isABankHoliday = bankHolidaySet.has(formattedDate);
+            const isAWeekend = weekends.isAWeekend(leaveStart);
+            const isABankHoliday = bankHolidays.has(formattedDate);
 
             if (!isAWeekend && !isABankHoliday) {
                 workingDays++;
