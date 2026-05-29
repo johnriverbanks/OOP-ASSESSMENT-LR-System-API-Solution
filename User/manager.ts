@@ -1,4 +1,4 @@
-import { FullName } from "./fullName";
+import { FullName } from "./FullName";
 import { UserRole } from "./userRoleEnum";
 import { LeaveBalance } from "../LeaveSystem/leaveBalance";
 import { Employee } from "./employee";

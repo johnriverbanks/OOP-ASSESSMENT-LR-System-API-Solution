@@ -3,7 +3,7 @@ import { BankHolidayOrigin } from "./bankHolidaysOrigin";
 export class NagerBankHolidayProvider implements BankHolidayOrigin {
 
     canHandle(country: string): boolean {
-        return true; // fallback provider
+        return true;
     }
 
     async getBankHolidays(country: string): Promise<Set<string>> {

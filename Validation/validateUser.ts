@@ -1,2 +1,6 @@
-import { errorMessages } from "./errorMessages";
+import { errorMessages } from "./errorMessage";
 
+export class ValidateDate {
+
+    constructor() {}
+}

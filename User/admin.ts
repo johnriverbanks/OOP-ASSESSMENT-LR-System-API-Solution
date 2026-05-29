@@ -1,6 +1,6 @@
 import { LeaveBalance } from "../LeaveSystem/leaveBalance";
 import { validateCountry } from "../Validation/validateCountry";
-import { FullName } from "./fullName";
+import { FullName } from "./FullName";
 import { Manager } from "./manager";
 import { UserRole } from "./userRoleEnum";
 

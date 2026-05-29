@@ -1,6 +1,6 @@
 import { User } from "./user";
 import { UserRole } from "./userRoleEnum";
-import { FullName } from "./fullName";
+import { FullName } from "./FullName";
 import { validateCountry } from "../Validation/validateCountry";
 import { LeaveBalance } from "../LeaveSystem/leaveBalance";
 

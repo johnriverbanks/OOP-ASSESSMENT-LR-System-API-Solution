@@ -1,11 +1,11 @@
-import { FullName } from "./fullName";
+import { FullName } from "./FullName";
 import { UserRole } from "./userRoleEnum";
 import { validateCountry } from "../Validation/validateCountry";
 
 export abstract class User {
 
     constructor (
-        private fullName: FullName,
+        private readonly fullName: FullName,
         public readonly country: string,
         private role: UserRole,
         private readonly email: string,
