@@ -1,4 +1,4 @@
-export const errorMessages = {
+export const ERROR_MESSAGE = {
     INVALID_FIRST_NAME: "First name must be a string and not blank",
     INVALID_SURNAME: "Surname must be a string and not blank",
     STRING_TOO_LONG: "Length of input is too long",

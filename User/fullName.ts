@@ -1,13 +1,13 @@
 import { ValidationError } from "../Validation/validationError";
-import { errorMessage } from "../Validation/errorMessage";
+import { ERROR_MESSAGE } from "../Validation/errorMessage";
 
 export class FullName {
     constructor (
         private readonly firstName: string,
         private readonly surname: string) {
 
-            this.firstName = this.validateName(firstName, errorMessage.INVALID_FIRST_NAME, 20);
-            this.surname = this.validateName(surname, errorMessage.INVALID_SURNAME, 20);
+            this.firstName = this.validateName(firstName, ERROR_MESSAGE.INVALID_FIRST_NAME, 20);
+            this.surname = this.validateName(surname, ERROR_MESSAGE.INVALID_SURNAME, 20);
 
         }
 
@@ -16,6 +16,10 @@ export class FullName {
 
             if (typeof name !== "string" || name.length === 0) {
                 throw new ValidationError(errorMessage);
+            }
+
+            if (name.length > maxLength) {
+                throw new ValidationError(ERROR_MESSAGE.STRING_TOO_LONG);
             }
 
             return name

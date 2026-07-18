@@ -1,13 +1,7 @@
 import { ValidationError } from "./validationError";
 
-export abstract class Validator<T> {
+export abstract class Validator {
 
-    abstract validate(value: T): void;
+    isNull(name: any, ) {}
 
-    protected ensure (condition: boolean, message: string): void {
-
-        if (!condition) {
-            throw new ValidationError(message);
-        }
-    }
 }
